@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Application</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'>
+
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="full">
+            <div class="title">
+                <span>
+                    HOD Management
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+        <div class="fullBody">
+
+            <div>
+
+                <div class="loginPopup">
+                    <div class="formPopup" id="popupForm">
+
+                        <div class="formContainer">
+                            <form id=" form" name="form1">
+                                <h2>HOD Form</h2>
+                                <label for="name">
+                                    <span>Full Name</span>
+                                </label>
+                                <input type="text" id="name" placeholder="Full Name">
+                                <label for="content">
+                                    <span>Experiance </span>
+                                </label>
+                                <input type="text" id="exp" placeholder="Experiance">
+                                <label for="register no">
+                                    <span>Register Number</span>
+                                </label>
+                                <input type="text" id="regno" placeholder="Register Number " maxlength="10">
+                                <button type="button" id="btn" onclick="submitForm(),closeForm()"
+                                    class="btn">ADD</button>
+                                <button type="button" onclick="closeForm()" class="btn cancel">CLOSE</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div id="msg" class="statusMsg">
+
+            </div>
+
+            <div class="popUpContainer">
+                <button class="openButton" onclick="openForm(),newReset()"><strong>+ ADD HOD</strong></button>
+            </div>
+
+            <div class="mainTable">
+
+                <div class="field">
+                    <fieldset>
+                        <table id="table">
+                            <legend>
+                                <h2>HOD List</h2>
+                            </legend>
+                            <tr>
+                                <td class="col1">Name</td>
+                                <td class="col1">Experiance</td>
+                                <td class="col1">RegNo</td>
+                                <td class="col1">Action</td>
+
+                            </tr>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
