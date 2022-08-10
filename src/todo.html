@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Application</title>
+    <title>todo val</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'>
@@ -39,18 +39,21 @@
                             <form id=" form" name="form1">
                                 <h2>HOD Form</h2>
                                 <label for="name">
-                                    <span>Full Name</span>
+                                    <span>Full Name:</span>
+                                    <span id="error"></span>
                                 </label>
                                 <input type="text" id="name" placeholder="Full Name">
                                 <label for="content">
-                                    <span>Experiance </span>
+                                    <span >Experiance:</span>
+                                    <span id="expError"> </span>
                                 </label>
-                                <input type="text" id="exp" placeholder="Experiance">
+                                <input type="text" id="exp" placeholder="Experiance" maxlength="2">
                                 <label for="register no">
-                                    <span>Register Number</span>
+                                    <span>Register No:</span>
+                                    <span id="regErr"></span>
                                 </label>
                                 <input type="text" id="regno" placeholder="Register Number " maxlength="10">
-                                <button type="button" id="btn" onclick="submitForm(),closeForm()"
+                                <button type="button" id="btn" onclick="formActions()"
                                     class="btn">ADD</button>
                                 <button type="button" onclick="closeForm()" class="btn cancel">CLOSE</button>
                             </form>

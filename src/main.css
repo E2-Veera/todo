@@ -259,3 +259,8 @@ html,body{
   .openButton:hover {
     opacity: 1;
   }
+
+
+  label{
+    float: left;
+  }

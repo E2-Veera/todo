@@ -6,6 +6,14 @@
     document.getElementById("popupForm").style.display = "none";
   }
 
+
+  function formActions(){
+    submitForm();
+    errorMessage();
+    emptyMsg();
+    regNoErrorMsg();
+
+  }
 //global varialbles
 var row = null;
 function submitForm () {
@@ -13,17 +21,20 @@ function submitForm () {
     var readData = readingDataFromLocalStorage(dataEntered);
   
    if(dataEntered == false){
-    msg.innerHTML = "<span style='color:#cc0000'>Please Enter Data!</span>";
+   
+    msg.innerHTML = "<span style='color:#cc0000'></span>";
    }
    else{
 
     if(row == null){
         insert(readData);
         msg.innerHTML = "<span style='color:#145858'>Data Inserted!</span>";
+        closeForm();
     }
     else{
         update();
         msg.innerHTML ="<span style='color:#145858'>Data Updated!</span>";
+        closeForm();
     }
    }
    
@@ -123,4 +134,48 @@ function readingDataFromLocalStorage (dataEntered){
         document.form1.reset(); 
      }
 
+
+     function errorMessage() {
+        var username =document.getElementById('name').value; 
+        var uname = document.getElementById("error")
+        if ((document.getElementById("name").value==""))
+        {
+            uname.textContent = "*This is required"
+            uname.style.color = "red"
+        } else {
+            uname.textContent = ""
+        }
+        console.log(username);
+    }
+   
+
+    function emptyMsg(){
+        var userpassword =document.getElementById('exp').value; 
+        var upass = document.getElementById("expError")
+        if ((document.getElementById("exp").value==""))
+        {
+            upass.textContent = "*This is required"
+            upass.style.color ="red"
+        }
+        else {
+            upass.textContent = ""
+        } 
+
+      console.log(userpassword);
+    }
      
+
+    function regNoErrorMsg(){
+        var userRegiter =document.getElementById('regno').value; 
+        var ureg = document.getElementById("regErr")
+        if ((document.getElementById("regno").value==""))
+        {
+            ureg.textContent = "*This is required"
+            ureg.style.color ="red"
+        }
+        else {
+            ureg.textContent = ""
+        } 
+
+      console.log(userRegiter);
+    }
